@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1235.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.kmu.ims.controllers.RootLayoutController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Operations">
+            <items>
+                <MenuItem mnemonicParsing="false" onAction="#showHelloView" text="Hello" />
+                <MenuItem mnemonicParsing="false" onAction="#showHelloDialog" text="Hello dialog" />
+              <MenuItem mnemonicParsing="false" onAction="#showEmployeeView" text="Manage Employees" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Core">
+                <items>
+                    <MenuItem mnemonicParsing="false" onAction="#showBrandView" text="Brands" />
+
+                </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleHelp" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <center>
+      <TabPane fx:id="rootTabPane" prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="ALL_TABS" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Dashboard">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="589.0" fitWidth="1180.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="-107.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-388.22515869140625" AnchorPane.topAnchor="14.0">
+                           <image>
+                              <Image url="@images/dashboard.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="poButton" layoutX="21.0" layoutY="107.0" mnemonicParsing="false" onAction="#poButtonClick" opacity="0.28" prefHeight="108.0" prefWidth="133.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="empButton" layoutX="27.0" layoutY="501.0" mnemonicParsing="false" onAction="#empButtonClick" opacity="0.25" prefHeight="106.0" prefWidth="126.0">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+
+        </tabs>
+      </TabPane>
+   </center>
+   <left>
+      <Accordion BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane animated="false" text="Administration">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Transactions">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="Reports">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+   </left>
+</BorderPane>

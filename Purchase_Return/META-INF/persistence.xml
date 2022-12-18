@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
+             version="3.0">
+  <persistence-unit name="default">
+      <class>kr.kmu.ims.models.Brand</class>
+      <class>kr.kmu.ims.models.Category</class>
+      <class>kr.kmu.ims.models.Department</class>
+      <class>kr.kmu.ims.models.Designation</class>
+      <class>kr.kmu.ims.models.Employee</class>
+      <class>kr.kmu.ims.models.GoodsAdjustmentNote</class>
+      <class>kr.kmu.ims.models.GoodsAdjustmentNoteDetail</class>
+      <class>kr.kmu.ims.models.GoodsIssueNote</class>
+      <class>kr.kmu.ims.models.GoodsIssueNoteDetail</class>
+      <class>kr.kmu.ims.models.GoodsReceiveNote</class>
+      <class>kr.kmu.ims.models.GoodsReceiveNoteDetail</class>
+      <class>kr.kmu.ims.models.GoodsTransferNote</class>
+      <class>kr.kmu.ims.models.GoodsTransferNoteDetail</class>
+      <class>kr.kmu.ims.models.InventoryTransaction</class>
+      <class>kr.kmu.ims.models.Item</class>
+      <class>kr.kmu.ims.models.ItemLocation</class>
+      <class>kr.kmu.ims.models.LoginRole</class>
+      <class>kr.kmu.ims.models.LoginUser</class>
+      <class>kr.kmu.ims.models.LoginUserRole</class>
+      <class>kr.kmu.ims.models.LookupItem</class>
+      <class>kr.kmu.ims.models.LookupType</class>
+      <class>kr.kmu.ims.models.PurchaseOrder</class>
+      <class>kr.kmu.ims.models.PurchaseOrderDetail</class>
+      <class>kr.kmu.ims.models.PurchaseReturn</class>
+      <class>kr.kmu.ims.models.PurchaseReturnDetail</class>
+      <class>kr.kmu.ims.models.Store</class>
+      <class>kr.kmu.ims.models.Supplier</class>
+      <class>kr.kmu.ims.models.WorkCenter</class>
+      <class>kr.kmu.ims.models.EmployeeView</class>
+      <class>kr.kmu.ims.models.GoodsIssueNoteDetailView</class>
+      <properties>
+          <property name="toplink.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+          <property name="toplink.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+          <property name="toplink.jdbc.user" value="c##ims"/>
+          <property name="toplink.jdbc.password" value="ims"/>
+          <property name="hibernate.connection.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+          <property name="hibernate.connection.driver_class" value="oracle.jdbc.OracleDriver"/>
+          <property name="hibernate.connection.username" value="c##ims"/>
+          <property name="hibernate.connection.password" value="ims"/>
+          <property name="openjpa.ConnectionURL" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+          <property name="openjpa.ConnectionDriverName" value="oracle.jdbc.OracleDriver"/>
+          <property name="openjpa.ConnectionUserName" value="c##ims"/>
+          <property name="openjpa.ConnectionPassword" value="ims"/>
+          <property name="eclipselink.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
+          <property name="eclipselink.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+          <property name="eclipselink.jdbc.user" value="c##ims"/>
+          <property name="eclipselink.jdbc.password" value="ims"/>
+      </properties>
+  </persistence-unit>
+</persistence>

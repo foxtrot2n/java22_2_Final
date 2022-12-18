@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="289.0" prefWidth="490.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.kmu.ims.controllers.EmployeeDetailController">
+   <children>
+      <Button fx:id="deleteEmpBtn" layoutX="109.0" layoutY="246.0" mnemonicParsing="false" onAction="#deleteEmployee" prefHeight="25.0" prefWidth="56.0" text="Delete" />
+      <Button fx:id="updateEmpBtn" layoutX="240.0" layoutY="246.0" mnemonicParsing="false" onAction="#saveEmployee" prefHeight="25.0" prefWidth="112.0" text="Save Changes" />
+      <HBox layoutX="17.0" layoutY="45.0">
+         <children>
+            <VBox prefHeight="112.0" prefWidth="82.0" spacing="12.0">
+               <children>
+                  <Label text="Emp Id" />
+                  <Label text="Name" />
+                  <Label layoutX="10.0" layoutY="39.0" text="Designation" />
+                  <Label layoutX="10.0" layoutY="68.0" text="Department" />
+                  <Label layoutX="10.0" layoutY="97.0" text="Hire Date" />
+               </children>
+            </VBox>
+            <VBox prefHeight="122.0" prefWidth="247.0" spacing="4.0">
+               <children>
+                  <TextField fx:id="idText" prefHeight="25.0" prefWidth="83.0" promptText="Id" />
+                  <TextField fx:id="nameText" prefHeight="25.0" prefWidth="172.0" promptText="Name" />
+                  <ComboBox fx:id="designationComboBox" prefHeight="25.0" prefWidth="248.0" promptText="Select" />
+                  <ComboBox fx:id="departmentComboBox" prefHeight="25.0" prefWidth="248.0" promptText="Select" />
+                  <TextField fx:id="hiringDateTextFiled" promptText="YYYY.MM.DD" />
+                  <CheckBox fx:id="isActiveCheckBox" mnemonicParsing="false" text="Is active?" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label fx:id="resultArea" layoutX="14.0" layoutY="207.0" prefHeight="38.0" prefWidth="339.0" textFill="RED" wrapText="true" />
+      <Label layoutX="17.0" prefHeight="38.0" prefWidth="329.0" text="Employee Registration Form">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="353.0" layoutY="167.0" text="YYYY.MM.DD (Korean format)" />
+   </children>
+</AnchorPane>
